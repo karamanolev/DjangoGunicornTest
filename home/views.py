@@ -9,8 +9,10 @@ from django.views.decorators.http import require_POST
 
 
 def index(request):
+    key = 'MODIFY THIS TO TEST CODE RELOADING'
     env = dict(os.environ)
     return render(request, 'index.html', {
+        'key': key,
         'env': env,
     })
 
